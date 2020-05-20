@@ -6,8 +6,10 @@ Install dotenetcore 3.1
 https://docs.microsoft.com/en-us/dotnet/core/install/linux-package-manager-ubuntu-1804
 
 Install GDip ( for Drawing dependency) : 
-sudo apt install libgdiplus
+`` sudo apt install libgdiplus``
 
+install the fonts inside the fonts folder
+`` sudo cp -r fonts/* /usr/local/share/fonts/pleco/`` 
 run with 
 ``dotnet run``
 
