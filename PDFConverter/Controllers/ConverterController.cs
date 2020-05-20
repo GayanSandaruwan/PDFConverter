@@ -22,6 +22,7 @@ namespace PDFConverter.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
+            Console.WriteLine("Inside Get request");
             return new string[] { "value1", "valueer23"  };
         }
 
@@ -34,11 +35,6 @@ namespace PDFConverter.Controllers
 
         // POST: api/Converter
         [HttpPost]
-        // public String Post(){
-        //     int status=1;
-        //         // var filesToDelete = HttpContext.Items[0];
-        //         var imageData = HttpContext.Current.Request.Params["docxFilePath"];
-        //         Console.WriteLine(imageData);
         public String Post([FromForm] Converter converter)
         {   
             //string value = data.name;
