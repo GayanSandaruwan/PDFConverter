@@ -9,7 +9,7 @@ Install GDip ( for Drawing dependency) :
 `` sudo apt install libgdiplus``
 
 install the fonts inside the fonts folder
-`` sudo cp -r fonts/* /usr/local/share/fonts/pleco/`` 
+`` sudo cp -r fonts /usr/local/share/fonts/pleco`` 
 run with 
 ``dotnet run``
 
