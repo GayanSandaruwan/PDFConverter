@@ -9,7 +9,17 @@ Install GDip ( for Drawing dependency) :
 `` sudo apt install libgdiplus``
 
 install the fonts inside the fonts folder
-`` sudo cp -r fonts /usr/local/share/fonts/pleco`` 
+``` 
+sudo cp -r fonts /usr/share/fonts/truetype/pleco
+cd /usr/share/fonts/truetype
+sudo apt install xfonts-utils
+sudo mkfontscale && sudo mkfontdir
+sudo fc-cache -f -v
+```
+### Add the new font directory to the X11 font path
+```
+
+```
 To check if font is installed
 ``fc-list | grep -i "Damindu"``
 
@@ -68,6 +78,8 @@ This will create a file named converter with response.
 To test a file conversion
 ```
 wget  --post-data 'pdfFilePath=/home/plecoadm/PDFConverterRepo/testPDF/I - IIA (T) 2009.08.28.pdf&docxFilePath=/home/plecoadm/PDFConverterRepo/testPDF/I - IIA (T) 2009.08.28.docx' https://localhost:5001/api/converter --no-check-certificate
+
+wget  --post-data 'pdfFilePath=/home/plecoadm/PDFConverterRepo/testPDF/04-2010(s).pdf&docxFilePath=/home/plecoadm/PDFConverterRepo/testPDF/04-2010(s).docx' https://localhost:5001/api/converter --no-check-certificate
 ``` 
 This will create a response file named converter, cat the file to see if it has string success.
 If success check if the converted file is placed under specified docx file path: ``/home/plecoadm/PDFConverterRepo/testPDF/I - IIA (T) 2009.08.28.docx``
