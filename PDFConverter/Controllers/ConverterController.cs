@@ -69,8 +69,8 @@ namespace PDFConverter.Controllers
 
         public static int ConvertPdfToDocx(string pdfFlePath, String docxFilePath)
         {
-            string pdfFile = Path.GetFullPath(pdfFlePath);
-            string docxFile = Path.GetFullPath(docxFilePath);
+            string pdfFile = pdfFlePath; //Path.GetFullPath(pdfFlePath);
+            string docxFile = docxFilePath;  //Path.GetFullPath(docxFilePath);
             //DocumentCore.Serial = "put your serial here";
             int status = 0;
             try
