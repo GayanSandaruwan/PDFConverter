@@ -10,6 +10,9 @@ Install GDip ( for Drawing dependency) :
 
 install the fonts inside the fonts folder
 `` sudo cp -r fonts /usr/local/share/fonts/pleco`` 
+To check if font is installed
+``fc-list | grep -i "Damindu"``
+
 run with 
 ``dotnet run``
 
