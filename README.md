@@ -16,10 +16,7 @@ sudo apt install xfonts-utils
 sudo mkfontscale && sudo mkfontdir
 sudo fc-cache -f -v
 ```
-### Add the new font directory to the X11 font path
-```
 
-```
 To check if font is installed
 ``fc-list | grep -i "Damindu"``
 
